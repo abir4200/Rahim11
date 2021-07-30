@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css"
+        integrity="sha512-+C1cmvw5D0Pfm6Gt9em3zp3OyebHM4wo05D38a0kXm7C1MRZZ9oPTbSX3KoRxAA0b2oHCqrcJEPikiXjsNXgtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.green.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="menu menu-ap" data-aos="fade-down">
+        <nav class="nav-ap">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+
+                <i class="fas fa-window-close " onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a>
+                        <div class="sub-menu-products">
+                            <ul>
+                                <li><a href="">Denims</a></li>
+                                <li><a href="">Suits</a></li>
+                                <li><a href="">Sweaters</a></li>
+                                <li><a href="">Intimates</a>
+                                <li><a href="">Activewear</a></li>
+                                <li><a href="">Outingwear</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Design Studio</a></li>
+                    <li><a href="">Sustainability</a></li>
+                    <li><a href="">Team</a></li>
+                </ul>
+            </div>
+
+            <i class="fas fa-bars " id="hideButton" onclick="showMenu()"></i>
+        </nav>
+    </div>
+
+
+    <section id="productPage" class="work-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="box-menu">
+                        <ul>
+                            <li class=" mixitup-control-active" data-filter="*">All</li>
+                            <li data-filter=".denims">Denims</li>
+                            <li data-filter=".suits">Suits</li>
+                            <li data-filter=".sweater">Sweater</li>
+                            <li data-filter=".intimates">Intimates</li>
+                            <li data-filter=".outingwear">Outingwear</li>
+                            <li data-filter=".activewear">Activewear</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row box-list">
+
+                <div class="col-sm-3 mix box-item denims">
+                    <img src="images/products/img1.jpg" alt="">
+                </div>
+                <div class="col-sm-3 mix box-item suits">
+                    <img src="images/products/img2.jpg" alt="">
+                </div>
+                <div class="col-sm-3 mix box-item sweater">
+                    <img src="images/products/img3.jpg" alt="">
+                </div>
+                <div class="col-sm-3 mix box-item intimates">
+                    <img src="images/products/img4.jpg" alt="">
+                </div>
+                <div class="col-sm-3 mix box-item outingwear">
+                    <img src="images/products/img5.jpg" alt="">
+                </div>
+                <div class="col-sm-3 mix box-item activewear">
+                    <img src="images/products/img6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="fotter">
+        <div class="container">
+            <div class="ftr">
+                <h3>About</h3>
+                <ul class="content">
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Work</a></li>
+                </ul>
+            </div>
+            <div class="ftr">
+                <h3>Contact</h3>
+                <ul class="content">
+                    <li><a href="">information@gmail.com</a></li>
+                    <li><a href="">01673842305</a></li>
+                    <li><a href="">German, Berlin</a></li>
+                </ul>
+            </div>
+
+            <div class="ftr">
+                <h3>Join Our Newsletter</h3>
+                <form action="#">
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <div class="btn">
+                        <input type="submit" value="subscribe">
+                    </div>
+                </form>
+            </div>
+
+            <div class="ftr">
+                <h3>Social</h3>
+                <ul class="content soc">
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!--------- Javascript for toggle menu -------->
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        var hideButton = document.getElementById("hideButton");
+        var productPage = document.getElementById("productPage");
+
+        function showMenu() {
+            hideButton.style.visibility = "hidden";
+            productPage.style.filter = "blur(3px)";
+            // navLinks.style.display = "block";
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            hideButton.style.visibility = "visible";
+            productPage.style.filter = "blur(0px)";
+            // navLinks.style.display = "none";
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+    <!-------- jquery ------->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+
+    <!-- ---------- aos ----------->
+
+    <script src="js/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init({
+                duration: 1500,
+                offset: 250
+            });
+        });
+    </script>
+
+
+
+
+    <!------ mixitup ------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+        integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            var mixer = mixitup('.box-list');
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+
+
+<!-- .work-box img {
+    width: 100%;
+  }
+  .box-item {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .work-box .box-item img {
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .work-box .box-menu {
+    text-align: center;
+  }
+  
+  .work-box .box-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .work-box .box-menu ul li {
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 60px;
+    margin: 34px 4px;
+    background: darkorange;
+    font-size: 18px;
+    padding: 10px 30px;
+    display: inline-block;
+  } -->
